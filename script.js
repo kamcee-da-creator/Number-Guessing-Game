@@ -5,7 +5,7 @@
 //     });
 // import createKindeClient from "@kinde-oss/kinde-auth-pkce-js";
 
-import createKindeClient from './@kinde-oss/kinde-auth-pkce-js/';
+import createKindeClient from './node_modules/@kinde-oss/kinde-auth-pkce-js/dist/kinde-auth-pkce-js.esm.js';
 
 async function setupKinde() {
     const kinde = await createKindeClient({
