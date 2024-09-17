@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number Counting Game</title>
-</head>
-<body>
-    <div id="logged_out_view">
-        <H2>WELCOME
-            
-        </H2>
-        <button id="login" type="button">Sign in</button>
-        <button id="register" type="button">Register</button>
-    </div>
-    <div id="logged_in_view" style="display: none;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Study Buddy</title>
+  </head>
+  <body>
+    <main>
+      <section id="logged_out_view">
+        <div class="login-flex">
+          <div class="item">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player
+              src="https://lottie.host/fd2ed24d-f902-47a0-83d1-86105fcc604e/joxyBiwXdE.json"
+              background="##fff"
+              speed="1"
+              style="width: 300px; height: 300px"
+              loop
+              controls
+              autoplay
+              direction="1"
+              mode="normal"
+            ></lottie-player>
+          </div>
+          <div class="item">
+            <h2>Welcome to StudyBuddy</h2>
+          
+            <div class="flex-btn">
+              <button id="login" type="button">LogIn</button>
+              <!-- <button id="register" type="button">Signup</button> -->
+              <span >
+                Dont have an account?
+                <a id="register" type="button">Signup</a></span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="logged_in_view" style="display: none">
+        <h2>Welcome Back</h2>
+        <h3 id="user-name"></h3>
         <button id="logout" type="button">Log out</button>
         <!-- Additional authenticated user content here -->
-    </div>
-    <script type="module" src="./node_modules/@kinde-oss/kinde-auth-pkce-js/dist/kinde-auth-pkce-js.esm.js"></script>
+      </section>
+    </main>
+    <!-- <script type="module" src="./node_modules/@kinde-oss/kinde-auth-pkce-js/dist/kinde-auth-pkce-js.esm.js"></script> -->
     <script type="module" src="./script.js"></script>
-</body>
+  </body>
 </html>

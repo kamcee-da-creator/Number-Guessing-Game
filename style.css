@@ -1,0 +1,74 @@
+/* Define color variables for light and dark themes */
+:root {
+  /* Light theme colors */
+  --primary-color: #f98806;
+  --background-color: #f8f9fa;
+  --text-color: #212529;
+  --button-color: #ff5100;
+  --button-text-color: white;
+}
+
+/* Dark theme - triggered automatically based on user's system preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #f98806;
+    --background-color: #212529;
+    --text-color: #e5e7eb;
+    --button-color: #ff5100;
+    --button-text-color: #d1d5db;
+  }
+}
+
+/* Base styles for the body */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Styles for header and buttons */
+
+button {
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 15px 20px;
+  font-weight: 900px;
+  border-radius: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: lighten(var(--button-color), 2%);
+}
+#logged_out_view {
+  /* background: rgb(102, 5, 5); */
+  height: 95vh;
+  margin: 0;
+}
+.login-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  /* background: red; */
+  height: 90vh;
+}
+.flex-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+.flex-btn a{
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* Additional styling can be added below */
+.item p{
+    font-size: 0.7rem;
+}
