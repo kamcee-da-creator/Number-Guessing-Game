@@ -12,7 +12,7 @@ async function setupKinde() {
     client_id: "7b1d7ef005a64c3e8469a6f61d303a38",
     domain: "https://kamcee.kinde.com",
     redirect_uri: window.location.origin,
-  });
+  });   
 
   document.getElementById("login").addEventListener("click", async () => {
     await kinde.login();
