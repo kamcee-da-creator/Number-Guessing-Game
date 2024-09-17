@@ -66,8 +66,8 @@ async function setupKinde() {
   const kinde = await createKindeClient({
     client_id: "7b1d7ef005a64c3e8469a6f61d303a38",
     domain: "https://kamcee.kinde.com",
-    // redirect_uri: window.location.origin,
-    redirect_uri: 'https://studybuddyng.netlify.app/',
+    redirect_uri: window.location.origin,
+    // redirect_uri: 'https://studybuddyng.netlify.app/',
   });   
 
   document.getElementById("login").addEventListener("click", async () => {
