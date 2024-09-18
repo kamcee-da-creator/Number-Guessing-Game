@@ -1,53 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./img/studybuddy-favicon-color.png"
+      type="image/x-icon"
+    />
+    <!-- Remix icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <title>Study Buddy</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <section id="logged_out_view">
-            <div class="login-flex">
-              <div class="item">
-                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                <lottie-player
-                  src="https://lottie.host/fd2ed24d-f902-47a0-83d1-86105fcc604e/joxyBiwXdE.json"
-                  background="##fff"
-                  speed="1"
-                  style="width: 300px; height: 300px"
-                  loop
-                  controls
-                  autoplay
-                  direction="1"
-                  mode="normal"
-                ></lottie-player>
-              </div>
-                <div class="item">
-                    <h2>Welcome to StudyBuddy</h2>
-                    <div class="flex-btn">
-                        <button id="login" type="button">Log In</button>
-                        <span>
-                            Don't have an account?
-                            <a  type="button" id="register">Sign up</a>
-                        </span>
-                    </div>
-                </div>
+      <!-- The screen we see once we are not loged in -->
+      <section id="logged_out_view">
+        <div class="login-flex">
+          <div class="item">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player
+              src="https://lottie.host/fd2ed24d-f902-47a0-83d1-86105fcc604e/joxyBiwXdE.json"
+              background="##fff"
+              speed="1"
+              style="width: 300px; height: 300px"
+              loop
+              controls
+              autoplay
+              direction="1"
+              mode="normal"
+            ></lottie-player>
+          </div>
+          <div class="item">
+            <h2>Welcome to StudyBuddy</h2>
+            <div class="flex-btn">
+              <button id="login" type="button">Log In</button>
+              <span>
+                Don't have an account?
+                <a type="button" id="register">Sign up</a>
+              </span>
             </div>
-        </section>
-        <section id="logged_in_view" style="display: none"> 
-            <h2>Welcome Back</h2>
-            <img src="" alt="" id="user-img">
-            <p>Name: <span id="user-name"></span></p>
-            <p>Email: <span id="user-email"></span></p> <!-- Added for displaying email -->
-            <button id="logout" type="button">Log out</button>
-            <!-- Additional authenticated user content here -->
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- The screen we see once we are loged in -->
+      <section id="logged_in_view" style="display: none">
+        <!-- user info -->
+        <div class="relative">
+          <!-- <img
+            src="./img/studybuddy-high-resolution-logo-transparent.png"
+            alt="logo"
+            id="logo"
+          /> -->
+          <img src="./img/pngwing.com(20).png" alt="" id="user-img" />
+        </div>
+
+        <!-- navigation bar -->
+        <header class="nav">
+          <div class="nav-item">
+            <div class="icon"><i class="ri-home-line"></i></div>
+            <h6>Search</h6>
+          </div>
+          <div class="nav-item">
+            <div class="icon"><i class="ri-search-line"></i></div>
+            <h6>Search</h6>
+          </div>
+          <div class="nav-item">
+            <div class="icon"><i class="ri-heart-fill"></i></div>
+            <h6>Favourites</h6>
+          </div>
+          <div class="nav-item" onclick="saveValue()">
+            <div class="icon"><i class="ri-coupon-3-fill"></i></div>
+            <h6>Bookings</h6>
+          </div>
+          <div class="nav-item" onclick="loginPage()">
+            <div class="icon"><i class="ri-user-3-fill"></i></div>
+            <h6>Profile</h6>
+          </div>
+        </header>
+
+        <!-- the app sections -->
+        <div class="section">
+          <div class="section-flex">
+            <!-- the user layouts (animation and dashboard) -->
+            <div class="item">
+              <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+              <lottie-player
+                src="https://lottie.host/3f959841-6146-4426-a1d8-1f55bfbed112/q6VtxjDlQC.json"
+                background="##FFFFFF"
+                speed="0.8"
+                style="width: 200px; height: 200px"
+                loop
+                autoplay
+                direction="1"
+                mode="normal"
+              ></lottie-player>
+            </div>
+            <div class="item">
+              <h5>Hello <span id="user-name"></span></h5>
+              <p class="small">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                dignissimos ratione laudantium delectus vero, fugit cum ab
+                numquam maxime. Ipsum veniam impedit ducimus, aliquam laborum
+                corrupti voluptate odio repellendus labore.
+              </p>
+
+              <div class="item-flex"></div>
+              <div class="item-flex"></div>
+            </div>
+          </div>
+        </div>
+        <div class="user-info hide">
+          <!-- <h2>Hello <span id="user-name"></span> </h2> -->
+          <p><span id="user-name"></span></p>
+          <p><span id="user-email"></span></p>
+          <!-- Added for displaying email -->
+          <button id="logout" type="button">Log out</button>
+          <!-- Additional authenticated user content here -->
+        </div>
+      </section>
     </main>
     <!-- <script type="module" src="./@kinde-oss/kinde-auth-pkce-js/dist/kinde-auth-pkce-js.esm.js"></script> -->
     <!-- <script src="dist/bundle.js" type="module"></script> -->
 
     <script type="module" src="./index.js"></script>
-</body>
+  </body>
 </html>

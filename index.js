@@ -40,6 +40,10 @@ function displayUserDetails(userDetails) {
   if (userDetails.picture) {
     document.getElementById("user-img").src = userDetails.picture;
   }
+  else{
+    const imgElement =  document.getElementById("user-img");
+    imgElement.src = './img/pngwing.com(20).png';
+  }
 }
 
 function toggleView(isLoggedIn = false) {

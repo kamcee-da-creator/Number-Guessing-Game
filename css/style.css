@@ -1,3 +1,6 @@
+@import url(./body.css);
+@import url(./font.css);
+@import url(./nav.css);
 /* Define color variables for light and dark themes */
 :root {
   /* Light theme colors */
@@ -14,7 +17,7 @@
     --primary-color: #f98806;
     --background-color: #212529;
     --text-color: #e5e7eb;
-    --button-color: #ff5100;
+    --button-color: #120600;
     --button-text-color: #d1d5db;
   }
 }
@@ -42,7 +45,8 @@ button {
 }
 
 button:hover {
-  background-color: lighten(var(--button-color), 2%);
+  background-color: #eee;
+  color: #212529;
 }
 #logged_out_view {
   /* background: rgb(102, 5, 5); */
@@ -64,11 +68,11 @@ button:hover {
   gap: 10px;
   text-align: center;
 }
-.flex-btn a{
-    text-decoration: underline;
-    cursor: pointer;
+.flex-btn a {
+  text-decoration: underline;
+  cursor: pointer;
 }
 /* Additional styling can be added below */
-.item p{
-    font-size: 0.7rem;
+.item p {
+  font-size: 0.7rem;
 }

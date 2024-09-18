@@ -1,0 +1,34 @@
+/* bottom Nav  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 10dvh;
+  position: fixed;
+  width: 100dvw;
+  bottom: 0;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.254);
+  padding: 2.1rem 0;
+  z-index: 8;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--Main-Color);
+}
+.icon {
+  font-size: 1.2rem;
+  margin: 0 !important;
+  color: var(--Main-Color2);
+  font-family: var(--Montserrat);
+}
+/* bottom Nav ends */
