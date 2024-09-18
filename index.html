@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Study Buddy</title>
-  </head>
-  <body>
+</head>
+<body>
     <main>
-      <section id="logged_out_view">
-        <div class="login-flex">
-          <div class="item">
-            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-            <lottie-player
-              src="https://lottie.host/fd2ed24d-f902-47a0-83d1-86105fcc604e/joxyBiwXdE.json"
-              background="##fff"
-              speed="1"
-              style="width: 300px; height: 300px"
-              loop
-              controls
-              autoplay
-              direction="1"
-              mode="normal"
-            ></lottie-player>
-          </div>
-          <div class="item">
-            <h2>Welcome to StudyBuddy</h2>
-          
-            <div class="flex-btn">
-              <button id="login" type="button">LogIn</button>
-              <!-- <button id="register" type="button">Signup</button> -->
-              <span     >
-                Dont have an account?
-                <a id="register" type="button">Signup</a></span
-              >
+        <section id="logged_out_view">
+            <div class="login-flex">
+              <div class="item">
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                <lottie-player
+                  src="https://lottie.host/fd2ed24d-f902-47a0-83d1-86105fcc604e/joxyBiwXdE.json"
+                  background="##fff"
+                  speed="1"
+                  style="width: 300px; height: 300px"
+                  loop
+                  controls
+                  autoplay
+                  direction="1"
+                  mode="normal"
+                ></lottie-player>
+              </div>
+                <div class="item">
+                    <h2>Welcome to StudyBuddy</h2>
+                    <div class="flex-btn">
+                        <button id="login" type="button">Log In</button>
+                        <span>
+                            Don't have an account?
+                            <a href="#" id="register">Sign up</a>
+                        </span>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section id="logged_in_view" style="display: none">
-        <h2>Welcome Back</h2>
-        <h3 id="user-name"></h3>
-        <button id="logout" type="button">Log out</button>
-        <!-- Additional authenticated user content here -->
-      </section>
+        </section>
+        <section id="logged_in_view" style="display: none"> 
+            <h2>Welcome Back</h2>
+            <img src="" alt="" id="user-img">
+            <p>Name: <span id="user-name"></span></p>
+            <p>Email: <span id="user-email"></span></p> <!-- Added for displaying email -->
+            <button id="logout" type="button">Log out</button>
+            <!-- Additional authenticated user content here -->
+        </section>
     </main>
-    <!-- <script type="module" src="./node_modules/@kinde-oss/kinde-auth-pkce-js/dist/kinde-auth-pkce-js.esm.js"></script> -->
-    <script type="module" src="./script.js"></script>
-  </body>
+    <script type="module" src="./node_modules/@kinde-oss/kinde-auth-pkce-js/"></script>
+    <script type="module" src="./index.js"></script>
+</body>
 </html>

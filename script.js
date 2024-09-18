@@ -1,4 +1,9 @@
-import createKindeClient from "/node_modules/@kinde-oss/kinde-auth-pkce-js/dist/kinde-auth-pkce-js.esm.js";
+import createKindeClient from "/kinde-auth-pkce-js/dist/kinde-auth-pkce-js.esm.js";
+// import createKindeClient from "/node_modules/@kinde-oss/kinde-auth-pkce-js/dist/kinde-auth-pkce-js.esm.js";
+// import createKindeClient from "/node_modules/@kinde-oss/kinde-auth-pkce-js/dist/kinde-auth-pkce-js.esm.js";
+// import createKindeClient from "/@kinde-oss/kinde-auth-pkce-js/dist/kinde-auth-pkce-js.esm.js";
+
+
 async function setupKinde() {
   const kinde = await createKindeClient({
     client_id: "7b1d7ef005a64c3e8469a6f61d303a38",
@@ -32,7 +37,7 @@ async function setupKinde() {
 
 async function displayUserDetails(kinde) {
   const userDetails = await kinde.getUser(); // Assuming getUser() returns user details
-  document.getElementById("user-name").textContent = userDetails.name || "User";
+  document.getElementById("user-name").textContent = userDetails.textContent;
 
   
 }
