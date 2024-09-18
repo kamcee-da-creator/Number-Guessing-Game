@@ -11,5 +11,12 @@
   "description": "",
   "dependencies": {
     "@kinde-oss/kinde-auth-pkce-js": "^4.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "babel-loader": "^9.2.1",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
   }
 }
