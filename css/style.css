@@ -6,7 +6,7 @@
   /* Light theme colors */
   --primary-color: #f98806;
   --background-color: #f8f9fa;
-  --text-color: #212529;
+  --text-color: #1a4d80;
   --button-color: #ff5100;
   --button-text-color: white;
 }
@@ -17,18 +17,20 @@
     --primary-color: #f98806;
     --background-color: #212529;
     --text-color: #e5e7eb;
-    --button-color: #120600;
-    --button-text-color: #d1d5db;
+    --button-color: #ff5500;
+    --button-text-color: #ffffff;
   }
 }
 
 /* Base styles for the body */
 body {
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+ margin-bottom: 10rem;
+  font-family: "poppins", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
+  overflow-x: hidden !important;
+  width: 100dvw;
 }
 
 /* Styles for header and buttons */
@@ -38,9 +40,10 @@ button {
   color: var(--button-text-color);
   border: none;
   padding: 15px 20px;
-  font-weight: 900px;
-  border-radius: 1px;
+  font-weight: 900px ;
+  border-radius: 5px;
   cursor: pointer;
+  margin-top: 20px;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -52,6 +55,10 @@ button:hover {
   /* background: rgb(102, 5, 5); */
   height: 95vh;
   margin: 0;
+}
+#login{
+  font-weight: 800;
+font-family: Poppins;
 }
 .login-flex {
   display: flex;
@@ -75,4 +82,8 @@ button:hover {
 /* Additional styling can be added below */
 .item p {
   font-size: 0.7rem;
+}
+.login-h2{
+  font-size:1.2rem;
+  text-align: center;
 }
