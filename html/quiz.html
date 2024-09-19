@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Quiz</title>
+    <link
+      rel="shortcut icon"
+      href="./img/studybuddy-favicon-color.png"
+      type="image/x-icon"
+    />
+    <!-- Remix icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./../css/quiz.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <header class="nav">
+      <div class="nav-item" onclick="window.location.href='/'">
+        <div class="icon"><i class="ri-home-line"></i></div>
+        <h6>Home</h6>
+      </div>
+      <div class="nav-item" onclick="window.location.href='/html/search.html'">
+        <div class="icon"><i class="ri-search-line"></i></div>
+        <h6>Search</h6>
+      </div>
+      <div
+        class="nav-item"
+        onclick="window.location.href='/html/viewquiz.html'"
+      >
+        <div class="icon"><i class="ri-time-line"></i></div>
+        <h6>Take Quiz</h6>
+      </div>
+
+      <div
+        class="nav-item"
+        onclick="window.location.href='/html/favourites.html'"
+      >
+        <div class="icon"><i class="ri-heart-fill"></i></div>
+        <h6>Favourites</h6>
+      </div>
+
+      <div class="nav-item" onclick="window.location.href='/html/profile.html'">
+        <div class="icon"><i class="ri-user-3-fill"></i></div>
+        <h6>Profile</h6>
+      </div>
+    </header>
+    <main class="quiz-create">
+      <h2 class="center">Create a New Quiz</h2>
+      <form id="quizForm">
+        <div>
+          <label for="quizTitle">Quiz Title:</label>
+          <input type="text" id="quizTitle" required />
+        </div>
+        <div id="questionsContainer">
+          <h3>Questions</h3>
+          <!-- Default Question Template -->
+          <div class="question">
+            <input
+              type="text"
+              placeholder="Question text"
+              class="questionText"
+              required
+            />
+            <div class="options-container">
+              <input
+                type="text"
+                placeholder="Option 1"
+                class="option"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Option 2"
+                class="option"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Option 3"
+                class="option"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Option 4"
+                class="option"
+                required
+              />
+            </div>
+            <input
+              type="text"
+              placeholder="Correct Answer"
+              class="correctAnswer"
+              required
+            />
+          </div>
+        </div>
+        <button type="button" id="addQuestion">Add Question</button>
+        <button type="submit">Save Quiz</button>
+      </form>
+    </main>
+    <script src="./../js/links.js"></script>
+    <script src="../js/quiz.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+@import url(./body.css);
+@import url(./font.css);
+@import url(./nav.css);
+
+/* Define color variables for light and dark themes */
+:root {
+  /* Light theme colors */
+  --primary-color: #f98806;
+  --background-color: #f8f9fa;
+  --text-color: #1a4d80;
+  --button-color: #ff5100;
+  --button-text-color: white;
+}
+
+/* Dark theme - triggered automatically based on user's system preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #f98806;
+    --background-color: #212529;
+    --text-color: #e5e7eb;
+    --button-color: #ff5500;
+    --button-text-color: #ffffff;
+  }
+}
+
+body {
+  margin-bottom: 10rem;
+  font-family: "Poppins", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  overflow-x: hidden !important;
+  width: 100dvw;
+}
+
+.center {
+  text-align: center;
+}
+
+.quiz-create, .quiz-take {
+  padding: 2rem;
+  background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quiz-create h2, .quiz-take h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 2rem 0;
+}
+
+input {
+  padding: 1rem;
+  width: 90%;
+  outline: none;
+  border: none;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.5rem
+}
+#questionsContainer h3{
+    margin-top: 2rem;
+}
